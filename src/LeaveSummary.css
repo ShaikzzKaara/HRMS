@@ -1,0 +1,78 @@
+.leave-summary-panel {
+  margin-bottom: 2rem;
+}
+.leave-summary {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+.leave-summary-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.leave-box-item {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  min-width: 180px;
+  text-align: center;
+  position: relative;
+}
+.leave-summary-type {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.leave-summary-progress-overlap.large {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 0.5rem auto;
+}
+.circle-chart.large {
+  width: 80px;
+  height: 80px;
+  transform: rotate(-90deg);
+}
+.bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+.progress {
+  fill: none;
+  stroke-width: 3.8;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.3s;
+}
+.circle-label-overlap.large {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  /* Responsive font size for large numbers */
+}
+
+/* Decrease font size if the text is long (e.g., 10/11, 12/15) */
+.circle-label-overlap.large.long-text {
+  font-size: 0.85rem;
+}
+.leave-info-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+.leave-summary-card {
+  border: 1px solid #e9ecef;
+  background: #fff;
+  transition: box-shadow 0.2s;
+}
+.leave-summary-card:hover {
+  box-shadow: 0 4px 16px rgba(33, 150, 243, 0.08);
+} 

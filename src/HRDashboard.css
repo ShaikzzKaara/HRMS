@@ -1,0 +1,456 @@
+/* HR Dashboard - Professional Modern Redesign */
+.hr-dashboard {
+  background-color: #f7f9fb;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hr-header {
+  background: #F26522;
+  color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.hr-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #F26522;
+}
+
+.hr-header p {
+  margin: 0.5rem 0 0 0;
+  opacity: 0.9;
+  color: #F26522;
+}
+
+.hr-main-content {
+  padding: 32px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-cards {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.dashboard-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 32px 28px;
+  box-shadow: 0 4px 24px rgba(37,77,112,0.10);
+  border: 1.5px solid #e5e7eb;
+  flex: 1 1 260px;
+  min-width: 260px;
+  transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.dashboard-card:hover {
+  box-shadow: 0 8px 32px rgba(37,77,112,0.13);
+}
+
+.dashboard-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #F26522;
+}
+
+.dashboard-card .card-value {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  color: #F26522;
+}
+
+.dashboard-card .card-description {
+  font-size: 0.9rem;
+  color: #F26522;
+}
+
+.leave-requests-section {
+  background: #fff;
+  border-radius: 14px;
+  padding: 32px 28px;
+  box-shadow: 0 4px 24px rgba(37,77,112,0.10);
+  border: 1.5px solid #e5e7eb;
+  margin-bottom: 32px;
+}
+
+.leave-requests-section h2 {
+  color: #F26522;
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.employee-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.employee-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 22px 20px;
+  border: 1.5px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(37,77,112,0.06);
+  transition: box-shadow 0.2s;
+}
+
+.employee-card:hover {
+  box-shadow: 0 6px 18px rgba(37,77,112,0.13);
+}
+
+.employee-card h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #F26522;
+}
+
+.employee-card p {
+  color: #374151;
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.employee-card .status {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.employee-card .status.pending {
+  background-color: #fbbf24;
+  color: #fff;
+}
+
+.employee-card .status.approved {
+  background-color: #10b981;
+  color: #fff;
+}
+
+.employee-card .status.rejected {
+  background-color: #ef4444;
+  color: #fff;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.action-btn {
+  background: #F26522;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-right: 0.5rem;
+}
+
+.action-btn.approve {
+  background: #10b981;
+  color: #fff;
+}
+
+.action-btn.approve:hover {
+  background: #059669;
+}
+
+.action-btn.reject {
+  background: #ef4444;
+  color: #fff;
+}
+
+.action-btn.reject:hover {
+  background: #b91c1c;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(37,77,112, 0.18);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 14px;
+  padding: 32px 28px;
+  box-shadow: 0 8px 32px rgba(37,77,112,0.13);
+  min-width: 340px;
+  max-width: 95vw;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #F26522;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #F26522;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.modal-close:hover {
+  color: #ef4444;
+}
+
+.info-content {
+  margin-bottom: 18px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #374151;
+}
+
+.info-row strong {
+  color: #F26522;
+  font-weight: 600;
+}
+
+.reason-text {
+  color: #374151;
+  font-style: italic;
+}
+
+.reason-text-black {
+  color: #000 !important;
+  background: transparent;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.form-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.form-actions button {
+  padding: 10px 10px;
+  border: none;
+  width: 12vw;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.form-actions .btn-primary {
+  background: #10b981;
+  color: #fff;
+}
+
+.form-actions .btn-primary:hover {
+  background: #059669;
+}
+
+.form-actions .btn-secondary {
+  background: #F26522;
+  color: #fff;
+}
+
+.form-actions .btn-secondary:hover {
+  background: #F26522;
+}
+
+@media (max-width: 900px) {
+  .dashboard-cards, .employee-cards {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .hr-main-content {
+    padding: 18px 4vw;
+  }
+}
+
+/* HRDashboard.css - original professional style */
+body {
+  color: #000;
+}
+.lms-container {
+    background: #D1FAE5;
+    padding: 1rem;
+    border-radius: 12px;
+    height: 100%;
+    width: 100%;
+}
+.lms-container h2 {
+    color: #10B981;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.lms-sections-scroll {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    flex: 1 1 0;
+    max-height: 100%;
+    overflow-y: auto;
+    margin-top: 2rem;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+.lms-sections-scroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+.lms-section {
+    background: #2D2D2D;
+    border-radius: 8px;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    box-shadow: 0 1px 4px rgba(45,45,45,0.08);
+    border-left: 6px solid #10B981;
+    width: 100%;
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 250px;
+}
+.lms-users-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.2rem;
+    margin-top: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+.lms-users-row::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+.lms-user-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(45,45,45,0.08);
+    padding: 1rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 140px;
+    max-width: 160px;
+    flex: 0 0 140px;
+}
+.lms-user-pic {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    border: 2px solid #10B981;
+}
+.lms-user-id, .lms-user-name {
+    width: 100%;
+    display: block;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.lms-user-id {
+    font-size: 0.9rem;
+    color: #10B981;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+.lms-user-name {
+    font-size: 0.95rem;
+    color: #000;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.2;
+}
+.lms-user-menu {
+    background: none;
+    border: none;
+    color: #D1FAE5;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 0.3rem;
+    transition: color 0.2s;
+    align-self: flex-end;
+    padding: 2px;
+}
+.lms-user-menu:hover {
+    color: #10B981;
+}
+
+/* Only update sidebar and button colors, leave summary cards remain unchanged */
+
+ .sidebar {
+  width: 220px !important;
+  min-width: 180px !important;
+  max-width: 220px !important;
+  background: #ffffff !important;
+  color: #000 !important;
+  transition: background-color 0.3s ease;
+} 
+
+.lms-section button, .lms-section .btn, .lms-section .action-btn {
+  background: #F26522 !important;
+  color: #fff !important;
+  border: 1px solid #F26522 !important;
+}
+
+/* Ensure text is black by default */
+body, .lms-container h2, .lms-user-name, .lms-user-id, .lms-section, .lms-user-menu {
+  color: #000 !important;
+}
+
+.reject-btn-custom {
+  background: #fff !important;
+  color: #F26522 !important;
+  border: 1px solid #F26522 !important;
+}
+   

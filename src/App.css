@@ -1,0 +1,163 @@
+/* App.css - charcoal/teal/emerald/white theme */
+.App {
+  text-align: center;
+  background-color: #2D2D2D;
+  min-height: 100vh;
+  color: #000;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #2D2D2D;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #fff;
+}
+
+.App-link {
+  color: #10B981;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Global styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #EEF1DA;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #ADB2D4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-primary:hover {
+  background-color: #C7D9DD;
+}
+
+.btn-secondary {
+  background-color: #D5E5D5;
+  color: #ADB2D4;
+  border: 1px solid #ADB2D4;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-secondary:hover {
+  background-color: #C7D9DD;
+  color: white;
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ADB2D4;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #D5E5D5;
+  border-radius: 5px;
+  background-color: white;
+  color: #ADB2D4;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #ADB2D4;
+  box-shadow: 0 0 5px rgba(173, 178, 212, 0.3);
+}
+
+/* Error message styles */
+.error-message {
+  color: #ADB2D4;
+  background-color: #D5E5D5;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  border: 1px solid #C7D9DD;
+}
+
+/* Success message styles */
+.success-message {
+  color: #ADB2D4;
+  background-color: #EEF1DA;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  border: 1px solid #D5E5D5;
+}
+
+/* Card styles */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(173, 178, 212, 0.1);
+  padding: 20px;
+  margin: 10px 0;
+  border: 1px solid #D5E5D5;
+}
+
+/* Loading spinner */
+.loading {
+  color: #ADB2D4;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Link styles */
+a {
+  color: #ADB2D4;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #C7D9DD;
+  text-decoration: underline;
+}

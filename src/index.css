@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #2D2D2D;
+  color: #000;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Global color variables */
+:root {
+  --primary-color: #ADB2D4;
+  --secondary-color: #C7D9DD;
+  --accent-color: #D5E5D5;
+  --background-color: #EEF1DA;
+  --white: #FFFFFF;
+  --text-color: #ADB2D4;
+}
+
+/* Global button styles */
+button {
+  font-family: inherit;
+}
+
+/* Global link styles */
+a {
+  color: #ADB2D4;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #C7D9DD;
+}
+
+/* Global input styles */
+input, textarea, select {
+  font-family: inherit;
+}
+
+/* Global focus styles */
+*:focus {
+  outline: 2px solid #ADB2D4;
+  outline-offset: 2px;
+}
+
+/* Global scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #EEF1DA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ADB2D4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C7D9DD;
+}
