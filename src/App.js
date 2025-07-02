@@ -9,6 +9,8 @@ import LogoutRedirect from './LogoutRedirect';
 import PostLoginRedirect from './PostLoginRedirect';
 import UpdatePassword from './UpdatePassword';
 import HRTicketing from './HRTicketing';
+import EmployeeAMS from './employee_ams';
+import HRAms from './hr_ams';
 import './App.css';
 
 // User Context
@@ -186,6 +188,30 @@ function App() {
             sessionStorage.clear();
           }} />} />
           <Route path="/post-login" element={<PostLoginRedirect role={user?.role} />} />
+          <Route
+            path="/employee_ams"
+            element={
+              <PrivateRoute currentUser={user} redirectTo="/login">
+                {user?.role === 'hr' ? (
+                  <Navigate to="/hrdashboard" replace />
+                ) : (
+                  <EmployeeAMS user={user} userId={user?.id} onLogout={handleLogout} />
+                )}
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/hr_ams"
+            element={
+              <PrivateRoute currentUser={user} redirectTo="/login">
+                {user?.role === 'hr' ? (
+                  <HRAms user={user} onLogout={handleLogout} />
+                ) : (
+                  <Navigate to="/home" replace />
+                )}
+              </PrivateRoute>
+            }
+          />
           {/* Catch-all route to always redirect to login */}
           <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>

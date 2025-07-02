@@ -638,7 +638,7 @@ const EmployeeHomeBody = ({ user, onLogout }) => {
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem', width: '100%' }}>
           <h2 className="text-2xl font-bold" style={{ color: '#F26522', fontSize: '2rem', marginBottom: '19px', textAlign: 'left' }}>Leave Dashboard</h2>
           <button
-            className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 shadow-sm text-white font-semibold py-2 px-5 rounded flex items-center"
+            className="apply-leave-btn flex items-center"
             style={{ display: 'flex', alignItems: 'center', gap: 8 }}
             onClick={handleApplyLeave}
           >

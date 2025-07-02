@@ -7,7 +7,7 @@ import logoutIcon from './images/logout.png';
 
 const navItems = [
   { label: 'LMS', link: '/hrdashboard' },
-  { label: 'AMS', link: '#' },
+  { label: 'AMS', link: '/hr_ams' },
   { label: 'TICKET', link: '/ticketing' },
   { label: 'Settings', link: '#' },
 ];
@@ -17,25 +17,26 @@ function HRSidebar({ mainContent, onLogout }) {
   const location = window.location.pathname;
 
   const handleLogout = () => {
+    localStorage.clear();
+    sessionStorage.clear();
     if (onLogout) {
       onLogout();
-    } else {
-      localStorage.clear();
-      sessionStorage.clear();
-      navigate('/login', { replace: true });
     }
+    navigate('/login', { replace: true });
   };
 
   return (
     <div className="main-layout">
       <aside className="sidebar" style={{ background: '#FF3F33', color: '#000' }}>
         <div className="sidebar-header sidebar-logo-center">
-          <img src={logo} alt="Company Logo" className="sidebar-logo-img" />
+          {/* <img src={logo} alt="Company Logo" className="sidebar-logo-img" /> */}
+          <img src={logo} alt="Company Logo" className="sidebar-logo-img" style={{ maxWidth: '1900px', maxHeight: '75px', width: 'auto', height: 'auto' }} />
         </div>
         <nav className="sidebar-nav">
           {navItems.map((item, idx) => {
             let isSelected = false;
             if (item.label === 'LMS' && location === '/hrdashboard') isSelected = true;
+            if (item.label === 'AMS' && location === '/hr_ams') isSelected = true;
             if (item.label === 'TICKET' && location === '/ticketing') isSelected = true;
             if (item.link.startsWith('/')) {
               return (

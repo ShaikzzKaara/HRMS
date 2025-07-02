@@ -414,7 +414,7 @@ const TicketingSystem = ({ user, onLogout }) => {
               Ticketing System
             </h1>
             <div className="flex-1" />
-            <button className="bg-blue-600 hover:bg-blue-700 text-white shadow-sm font-medium px-4 py-2 gap-2 rounded flex items-center" onClick={handleRaiseTicket}>
+            <button className="apply-leave-btn flex items-center gap-2" onClick={handleRaiseTicket} style={{boxShadow:'0 2px 8px rgba(242,101,34,0.08)'}}>
               <PlusCircle className="size-4 mr-2" />
               Raise Ticket
             </button>
